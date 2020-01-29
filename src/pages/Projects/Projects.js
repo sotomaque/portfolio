@@ -4,6 +4,9 @@ import { SectionTitle, Pill } from '../../styles';
 import { ProjectItem, ProjectTitle, SkillContainer } from './styles';
 
 const Projects = ({ user }) => {
+
+  console.log(user)
+
   return (
     <Layout user={user}>
       <div>
@@ -11,7 +14,7 @@ const Projects = ({ user }) => {
         <ul>
           {user.projects.map((project, i) => (
             <ProjectItem key={i}>
-              <ProjectTitle>{project.name}</ProjectTitle>
+              <a href={project.githubUrl} target="__blank"><ProjectTitle>{project.name}</ProjectTitle></a>
               <p>{project.summary}</p>
               <SkillContainer>
                 {[...project.languages, ...project.libraries].map((item, j) => (

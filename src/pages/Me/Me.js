@@ -3,6 +3,11 @@ import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph, Pill } from '../../styles';
 import { ProfileLink } from './styles';
 
+const HobbiesAndInterests = [
+  "drones", "photoshop", "web design", "web development", "app design",
+  "sketch", "adobe xd", "traveling"
+]
+
 const Me = ({ user }) => {
   return (
     <Layout user={user}>
@@ -15,6 +20,14 @@ const Me = ({ user }) => {
         <div>
           {user.skills.map(skill => (
             <Pill key={skill.name}>{skill.name}</Pill>
+          ))}
+        </div>
+      </div>
+      <div>
+        <SectionTitle>Hobbies &amp; Interests</SectionTitle>
+        <div>
+          {HobbiesAndInterests.map(poi => (
+            <Pill key={poi}>{poi}</Pill>
           ))}
         </div>
       </div>

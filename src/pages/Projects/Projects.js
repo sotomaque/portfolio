@@ -17,8 +17,8 @@ const Projects = ({ user }) => {
               <a href={project.githubUrl} target="__blank"><ProjectTitle>{project.name}</ProjectTitle></a>
               <p>{project.summary}</p>
               <SkillContainer>
-                {[...project.languages, ...project.libraries].map((item, j) => (
-                  <Pill key={j}>{item}</Pill>
+                {[...project.languages, ...project.libraries].map((item, index) => (
+                  <Pill key={index}>{item}</Pill>
                 ))}
               </SkillContainer>
             </ProjectItem>

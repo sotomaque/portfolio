@@ -11,7 +11,6 @@ function App() {
       .then(res => res.json())
       .then(user => {
         setUser(user);
-        console.log(user)
       });
   }, []);
 

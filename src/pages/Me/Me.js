@@ -8,6 +8,11 @@ const HobbiesAndInterests = [
   "sketch", "adobe xd", "traveling"
 ]
 
+const SpokenLanguages = [
+  "English - 10/10 reading, 10/10 writing",
+  "Spanish - Native - 10/10 reading, 10/10 writing"
+]
+
 const Me = ({ user }) => {
   return (
     <Layout user={user}>
@@ -27,6 +32,14 @@ const Me = ({ user }) => {
         <SectionTitle>Hobbies &amp; Interests</SectionTitle>
         <div>
           {HobbiesAndInterests.map(poi => (
+            <Pill key={poi}>{poi}</Pill>
+          ))}
+        </div>
+      </div>
+      <div>
+        <SectionTitle>Spoken Languages</SectionTitle>
+        <div>
+          {SpokenLanguages.map(poi => (
             <Pill key={poi}>{poi}</Pill>
           ))}
         </div>

@@ -5,10 +5,10 @@ import { ArrowRight16 } from '@carbon/icons-react';
 import { HeaderContainer, Header, Image, ViewResumeLink } from './styles';
 
 const UserHeader = ({ user }) => {
-  const location = useLocation();
 
+  const location = useLocation();
   return (
-    <HeaderContainer isHome={location.pathname === '/'}>
+    <HeaderContainer isHome={true}>
       <Header>
         <Image src={user.basics.picture} />
         <div>
